@@ -441,6 +441,10 @@ b {
   font-weight: bold;
 }
 
+i {
+  font-style: oblique;
+}
+
 .font-helvetica, body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

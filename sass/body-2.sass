@@ -72,7 +72,7 @@
 	
 
 // Subnavigation-style sidebar box
-.subnav, .text, .button, .form
+.subnav, .text, .button, .form, .testimonial
 	@extend .container-setup
 	h1
 		@extend .box
@@ -158,6 +158,29 @@
 		line-height: 1.7em
 		&:last-child
 			margin-bottom: ($v-gap / 2)
+.testimonial
+	margin-bottom: 30px !important
+	p
+		font-family: "EmbedFont-1"
+		@extend .box
+		width: ($option-width - ($h-gap *2))
+		margin: 15px auto ($v-gap / 2)
+		padding: 0
+		color: $option-text
+		font-size: 13px
+		font-weight: 200
+		text-align: left
+		line-height: 1.7em
+		&:last-child
+			margin-bottom: ($v-gap / 2)
+
+.ad
+	@extend .box
+	width: $sidebar-width
+	height: 115px
+	background: #000
+	margin-bottom: $v-gap
+
 
 // Button-style sidebar box
 .button

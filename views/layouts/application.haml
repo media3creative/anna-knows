@@ -31,10 +31,10 @@
 
 // FOOTER LINKS
 - @linkA1 = ["Anna Jennings", "ssss"]
-- @linkA2 = ["(713) 398-8474", "ssss"]
+- @linkA2 = ["(281) 940-4841", "ssss"]
 - @linkA3 = ["anna@annaknows.com", "mailto:anna@annaknows.com"]
 - @linkA4 = ["Terms of Service", "/terms"]
-- @linkA5 = ["link name", "/path"]
+- @linkA5 = ["Testimonials", "/testimonials"]
 
 - @linkB1 = ["Facebook", "http://www.facebook.com/annaknowsfanpage"]
 - @linkB2 = ["Twitter", "http://twitter.com/annaknowscom"]
@@ -252,6 +252,9 @@
               =" | "
               %a{:href => @linkA4[1]}
                 =@linkA4[0]
+              / =" | "
+              / %a{:href => @linkA5[1]}
+              /   =@linkA5[0]
           .row
             %p
               %a{:href => @linkB1[1], :target => "_blank"} 

@@ -201,6 +201,10 @@ b {
   font-weight: bold;
 }
 
+i {
+  font-style: oblique;
+}
+
 .font-helvetica {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -388,7 +392,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   display: inline;
   margin: 0 0 0.3em 0;
   color: #666666;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: 200;
   text-decoration: none;
 }
