@@ -72,7 +72,7 @@
 	
 
 // Subnavigation-style sidebar box
-.subnav, .text, .button, .form, .testimonial
+.subnav, .text, .button, .form, .testimonial, .ad
 	@extend .container-setup
 	h1
 		@extend .box
@@ -159,23 +159,56 @@
 		&:last-child
 			margin-bottom: ($v-gap / 2)
 .testimonial
+	padding: 15px 0
 	margin-bottom: 30px !important
+	h2
+		@extend .box
+		@extend .font-helvetica
+		position: relative
+		color: $secondary
+		background: $option-title-bg
+		width: ($option-width - ($h-gap *2))
+		margin: 0 auto 15px
+		padding: 0
+		font-size: 18px
+		font-weight: bold
+		text-align: left
+	h3
+		@extend .box
+		@extend .font-helvetica
+		position: relative
+		color: $secondary
+		background: $option-title-bg
+		width: ($option-width - ($h-gap *2))
+		margin: -10px auto 15px
+		padding: 0
+		font-size: 13px
+		font-weight: 100
+		font-style: oblique
+		text-align: left
 	p
 		font-family: "EmbedFont-1"
 		@extend .box
 		width: ($option-width - ($h-gap *2))
-		margin: 15px auto ($v-gap / 2)
+		margin: 0 auto 15px
 		padding: 0
 		color: $option-text
 		font-size: 13px
 		font-weight: 200
-		text-align: left
-		line-height: 1.7em
+		text-align: justify
+		line-height: 1.3em
 		&:last-child
 			margin-bottom: ($v-gap / 2)
+		a
+			color: #fff
+			text-decoration: none
+			border-bottom: 1px dotted $primary-light
+			&:hover
+				color: $primary-light
+				border-bottom: 1px solid transparent
+		
 
 .ad
-	@extend .box
 	width: $sidebar-width
 	height: 115px
 	background: #000

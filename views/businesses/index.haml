@@ -2,24 +2,25 @@
 - @subtitle = ""
 - @body_class = "six"
 - @section = params[:category] || "all"
+- @testimonial = params[:testimony] || "general1"
 
-- @link6 = ["Businesses", "/businesses?category=all"]
-- @link6A = ["Arts &amp; Crafts", "/businesses?category=artscrafts"]
-- @link6B = ["Beauty &amp; Health", "/businesses?category=beautyhealth"]
-- @link6C = ["Books &amp; Magazines", "/businesses?category=booksmags"]
-- @link6D = ["Business / Professional Services", "/businesses?category=business"]
-- @link6E = ["Clothing &amp; Accessories", "/businesses?category=clothing"]
-- @link6F = ["Computers &amp; Media", "/businesses?category=computers"]
-- @link6G = ["Direct Sales Companies", "/businesses?category=directsales"]
-- @link6H = ["Event / Party Planning", "/businesses?category=events"]
-- @link6I = ["Food", "/businesses?category=food"]
-- @link6J = ["Home &amp; Garden", "/businesses?category=homegarden"]
-- @link6K = ["Non-profit / Foundations", "/businesses?category=nonprofit"]
-- @link6L = ["Online Shopping / Boutiques", "/businesses?category=onlineshop"]
-- @link6M = ["Personal Services", "/businesses?category=personal"]
-- @link6N = ["Real Estate", "/businesses?category=realestate"]
-- @link6O = ["Travel / Transportation", "/businesses?category=travel"]
-- @link6P = ["Web / Internet", "/businesses?category=web"]
+- @link6 = ["Businesses", "?category=all"]
+- @link6A = ["Arts &amp; Crafts", "?category=artscrafts"]
+- @link6B = ["Beauty &amp; Health", "?category=beautyhealth"]
+- @link6C = ["Books &amp; Magazines", "?category=booksmags"]
+- @link6D = ["Business / Professional Services", "?category=business"]
+- @link6E = ["Clothing &amp; Accessories", "?category=clothing"]
+- @link6F = ["Computers &amp; Media", "?category=computers"]
+- @link6G = ["Direct Sales Companies", "?category=directsales"]
+- @link6H = ["Event / Party Planning", "?category=events"]
+- @link6I = ["Food", "?category=food"]
+- @link6J = ["Home &amp; Garden", "?category=homegarden"]
+- @link6K = ["Non-profit / Foundations", "?category=nonprofit"]
+- @link6L = ["Online Shopping / Boutiques", "?category=onlineshop"]
+- @link6M = ["Personal Services", "?category=personal"]
+- @link6N = ["Real Estate", "?category=realestate"]
+- @link6O = ["Travel / Transportation", "?category=travel"]
+- @link6P = ["Web / Internet", "?category=web"]
 
 %link{:href => "stylesheets/body-2.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
 %script{:src => "javascripts/expandCollapse.js", :type => "text/javascript"}
@@ -33,10 +34,11 @@
   .center
     .content
       .sidebar.right
-        / .ad
-        / .ad
-        / .ad
-        / .ad
+        .ad
+          %a{:href=> "mailto:anna@annaknows.com?Subject=AnnaKnows Banner&Body=I'm interested in purchasing a banner on AnnaKnows.com"}
+            %img{:src=>"/images/ads/blank.gif"}
+        .testimonial
+          = render "/testimonials/" + @testimonial + "/index.haml"              
 
       .main
         .content

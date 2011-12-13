@@ -1,6 +1,7 @@
 - @title = " | About"
 - @subtitle = ""
 - @body_class = "two"
+- @testimonial = params[:testimony] || "personal1"
 
 %link{:href => "stylesheets/body-2.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
 
@@ -19,9 +20,11 @@
         .ad.omg
           %a{:href=> "http://ovallemg.com/", :target=> "_blank"}
             %img{:src=>"/images/ads/omg-Dec2011.gif"}
-        / .ad
-        / .ad
-        / .ad
+        .ad
+          %a{:href=> "mailto:anna@annaknows.com?Subject=AnnaKnows Banner&Body=I'm interested in purchasing a banner on AnnaKnows.com"}
+            %img{:src=>"/images/ads/blank.gif"}
+        .testimonial
+          = render "/testimonials/" + @testimonial + "/index.haml"              
 
       #two.main
         .content

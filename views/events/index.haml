@@ -1,6 +1,7 @@
 - @title = " | Events"
 - @subtitle = ""
 - @body_class = "four"
+- @testimonial = params[:testimony] || "events1"
 
 %link{:href => "stylesheets/body-2.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
 
@@ -16,15 +17,13 @@
   .center
     .content
       #two.sidebar.right
-        / .testimonial
-        /   %p
-        /     I attended Anna's 1st Speed Networking Event and it was really nice.  The attendance was good and it was very well organized. I got the opportunity to connect with a lot of great people.  Thanks Anna, I will definitely do it again.
-        /     %br
-        /     %i &mdash;Alzena McNeil, A. Marie Cakes/Event Planning
-        /   %p
-        /     %a{:href => "#"} Next testimonial >
-        /     %br
-        /     %a{:href => "/testimonials"} View All >
+        .testimonial
+          = render "/testimonials/" + @testimonial + "/index.haml"              
+        .ad
+          %a{:href=> "mailto:anna@annaknows.com?Subject=AnnaKnows Banner&Body=I'm interested in purchasing a banner on AnnaKnows.com"}
+            %img{:src=>"/images/ads/blank.gif"}
+
+
       #two.main
         .content
           .section.no-image
