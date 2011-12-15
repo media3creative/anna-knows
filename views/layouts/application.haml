@@ -75,10 +75,10 @@
       //$(document).ready(function () {
         if(
           navigator.userAgent.match(/Android/i) ||
-          navigator.userAgent.match(/webOS/i) ||
-          navigator.userAgent.match(/iPhone/i) ||
-          navigator.userAgent.match(/iPod/i) ||
-          navigator.userAgent.match(/iPad/i)
+          navigator.userAgent.match(/webOS/i)
+          / navigator.userAgent.match(/iPhone/i) ||
+          / navigator.userAgent.match(/iPod/i) ||
+          / navigator.userAgent.match(/iPad/i)
         ){
           $('head').append('<link rel="stylesheet" href="/stylesheets/mobile.css" type="text/css" />');
         }
